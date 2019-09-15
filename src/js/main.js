@@ -18,12 +18,15 @@ const loadHandler = () => {
     fallback.init();
 
     // here
-
+    
 
 }
-
 // if (document.readyState === 'complete') {
 //    loadHandler();
 // } else {
 //    $(window).on('load', loadHandler);
 // }
+$( "li" ).click(function() {
+    $( this ).toggleClass( "disable" );
+    $( this ).siblings( "li" ).addClass( "disable" );
+});

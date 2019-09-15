@@ -1,0 +1,98 @@
+/* Home specific style */
+.assistance{
+    .container{
+        display: block;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 80px 80px 120px 80px;
+    }
+    .logo{
+        margin-bottom: 150px;
+        display: block;
+    }
+    .list-faq{
+        margin-top: 60px;
+        li{
+            transition: height 1s ease;
+            height: auto;
+            position: relative;
+            border: #CCD7D4 solid 1px;
+            border-radius: 6px;
+            padding: 25px 30px;
+            font-size: 1em;
+            font-weight: 500;
+            color: $dark-green;
+            margin-bottom: 10px;
+            cursor: pointer;
+            &:before{
+                display: none;
+            }
+            svg{
+                position: absolute;
+                right: 30px;
+                top: 32px;
+            }
+            .infos{
+                height:auto;
+                color: #7B7B7B;
+                margin-top: 20px;
+                padding-right: 40px;
+            }
+            &.disable{
+                height: 76px;
+                overflow: hidden;
+                svg{
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+    .contact{
+        background-color: $dark-green;
+        color: #ffffff;
+        text-align: center;
+        .title-contact{
+            font-size:3.4rem;
+            line-height: 4.4rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        p{
+            font-size:2rem;
+            line-height: 3rem;
+            margin-bottom: 70px;
+            color: #ffffff;
+        }
+        .cta{
+            font-size: 1.6rem;
+            background: $orange;
+            padding: 25px 35px;
+            width: fit-content;
+            margin: 40px auto 0;
+            color:#ffffff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            &:hover{
+                background: $light-orange;
+            }  
+        }
+        .container{
+            padding: 130px 80px;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .mentions{
+        .container{
+            padding: 40px;
+        }
+        .logo{
+            margin-bottom: 100px;
+            display: block;
+        }
+    }
+
+}
