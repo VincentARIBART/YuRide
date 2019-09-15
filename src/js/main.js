@@ -22,8 +22,8 @@ const loadHandler = () => {
 
 }
 
-if (document.readyState === 'complete') {
-   loadHandler();
-} else {
-   $(window).on('load', loadHandler);
-}
+// if (document.readyState === 'complete') {
+//    loadHandler();
+// } else {
+//    $(window).on('load', loadHandler);
+// }
