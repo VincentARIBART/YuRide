@@ -13,34 +13,49 @@
     .list-faq{
         margin-top: 60px;
         li{
-            transition: height 1s ease;
-            height: auto;
             position: relative;
+            padding: 25px 30px 0px 30px;
+            margin-bottom: 10px;
             border: #CCD7D4 solid 1px;
             border-radius: 6px;
-            padding: 25px 30px;
             font-size: 1em;
             font-weight: 500;
             color: $dark-green;
-            margin-bottom: 10px;
             cursor: pointer;
             &:before{
                 display: none;
             }
+            .top{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                .title-faq{
+                    padding-right: 35px;
+                }
+            }
             svg{
-                position: absolute;
-                right: 30px;
-                top: 32px;
+                flex: 0 0 auto;
+                display: block;
+                align-self: center;
+                transition: transform 0.2s ease-out;
             }
             .infos{
-                height:auto;
+                max-height: 840px;
                 color: #7B7B7B;
                 margin-top: 20px;
-                padding-right: 40px;
+                overflow: hidden;
+                transition: max-height 0.3s ease-out;
+                p{
+                    padding-bottom: 25px;
+                }
             }
             &.disable{
-                height: 76px;
+                min-height:76px;
                 overflow: hidden;
+                .infos{
+                    max-height: 0;
+                    transition: max-height 0.3s ease-out;
+                }
                 svg{
                     transform: rotate(180deg);
                 }
@@ -83,9 +98,9 @@
     }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
 
-    .mentions{
+    .assistance{
         .container{
             padding: 40px;
         }
@@ -93,6 +108,33 @@
             margin-bottom: 100px;
             display: block;
         }
+        .contact{
+            .container{
+                padding: 40px;
+                .title-contact{
+                    font-size: 3rem;
+                }
+                p{
+                    font-size: 1.7rem;
+                    margin-bottom: 50px;
+                }
+            }
+        }
     }
-
+}
+@media only screen and (max-width: 400px) {
+    .assistance{
+        .contact{
+            .container{
+                .title-contact{
+                    font-size: 2.4rem;
+                    line-height: 3.4rem;
+                }
+                .cta{
+                    font-size: 1.2rem;
+                    padding: 25px;
+                }
+            }
+        }
+    }
 }
